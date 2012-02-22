@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Stick - modular JSGI applications</title>
+    <link rel="stylesheet" href="./css/style.css" type="text/css" media="screen">
+</head>
+
+<body>
+<div class="wrap">
+  <div class="pad">
+
+    <div class="body">
+       <h1>Stick</h1>
+<p>Stick is a modular JSGI middleware composition layer and application framework.
+View <a href="https://github.com/hns/stick">Stick on Github</a>.</p>
+
+<h2>Overview</h2>
+
+<p>Stick is being developed on top of <a href="http://ringojs.org/">RingoJS</a>,
+a server side JavaScript runtime, but it could be ported to other platforms
+supporting <a href="http://wiki.commonjs.org/wiki/JSGI">JSGI</a> such as 
+<a href="http://olegp.github.com/common-node/">Common Node</a>.</p>
+
+<p>Stick provides an <code>Application</code> object that can be used to compose web
+applications out of JSGI middleware components. Middleware can in turn
+define methods or properties on the application object to make itself
+configurable to the outside world.</p>
+
+<p>Currently Stick comes with the following middleware modules:</p>
+
+<ul>
+<li><b>basicauth</b>    - basic HTTP authentication</li>
+<li><b>continuation</b> - generator-based async requests</li>
+<li><b>error</b>        - generating error pages</li>
+<li><b>etag</b>         - ETag based conditional GET</li>
+<li><b>gzip</b>         - GZip content encoding</li>
+<li><b>method</b>       - HTTP method overriding</li>
+<li><b>mount</b>        - mounting other applications</li>
+<li><b>notfound</b>     - generating 404 pages</li>
+<li><b>params</b>       - form data parsing</li>
+<li><b>profiler</b>     - JavaScript profiling</li>
+<li><b>render</b>       - mustache.js templates</li>
+<li><b>requestlog</b>   - collecting per-request log messages</li>
+<li><b>route</b>        - Sinatra-like request routing</li>
+<li><b>session</b>      - session support</li>
+<li><b>static</b>       - serving static files</li>
+<li><b>upload</b>       - handling file uploads</li>
+</ul>
+
+<p>Check out the demo applications and documentation to learn more.</p>
+
+<h2>Installing and running Stick</h2>
+
+<p>If you are using <a href="https://github.com/grob/rp">rp</a> you can install
+Stick with the following command:
+
+<pre><code>rp install stick</code></pre>
+
+<p>Otherwise you can install the latest git snapshot using <code>ringo-admin</code>:</p>
+
+<pre><code>ringo-admin install hns/stick</code></pre>
+
+<p>Alternatively, you can manually copy or symlink the stick directory into
+the <code>packages</code> directory of your ringojs installation.</p>
+
+<p>To start the stick demo application run the <code>ringo</code> command with the 
+<code>demo.js</code> script in the stick directory:</p>
+
+<pre><code>ringo examples/demo.js</code></pre>
+
+<p>Then point your browser to <a href="http://localhost:8080/">http://localhost:8080/</a>.</p>
+
+<h2>License</h2>
+
+<p>Stick is distributed under the
+<a href="https://github.com/hns/stick/blob/master/LICENSE">MIT license</a>.</p>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
